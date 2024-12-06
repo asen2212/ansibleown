@@ -1,0 +1,8 @@
+- name: Create a Folder on Remote Host
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create the folder
+      file:
+        path: /home/test/new_folder
+        state: directory
